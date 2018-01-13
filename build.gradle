@@ -40,8 +40,14 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-redis')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.jetbrains.kotlin:kotlin-stdlib:1.2.0")
     compile("org.jetbrains.kotlin:kotlin-reflect:1.2.0")
     compile("com.google.guava:guava:23.0")
     compile("commons-validator:commons-validator:1.6")
+}
+
+bootJar {
+    baseName = 'url-shortener-kotlin'
+    archiveName = "url-shortener-kotlin.jar"
 }
